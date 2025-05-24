@@ -20,10 +20,9 @@
         {% if result is string %}
         <li>{{ result }}</li>
         {% else %}
-        <li>A + B = {{ result[0] }}</li>
-        <li>A - B = {{ result[1] }}</li>
-        <li>A * B = {{ result[2] }}</li>
-        <li>A / B = {{ result[3] }}</li>
+            {% for i in result %}
+                <li>{{ i }}</li>
+            {% endfor %}
         {% endif %}
     </ul>
     {% endif %}
